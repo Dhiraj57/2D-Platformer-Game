@@ -446,3 +446,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03acfafd125fef44f9a7cb08b812716d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7657241566446517471}
+--- !u!95 &7657241566446517471 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2287518038316781291, guid: dc534f2d5f11ed64f98c7f54c124b119,
+    type: 3}
+  m_PrefabInstance: {fileID: 7657241566446517465}
+  m_PrefabAsset: {fileID: 0}
