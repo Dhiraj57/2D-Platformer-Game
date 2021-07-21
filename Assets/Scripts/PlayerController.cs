@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
             // Setting value of 'jump' boolean
-            if (vertical > 0 )
+            if (vertical > 0 && IsGrounded())
             {
                 animator.SetBool("Jump", true);
             }
@@ -86,7 +86,20 @@ public class PlayerController : MonoBehaviour
         position.x += horizontal * Speed * Time.deltaTime;
         transform.position = position;
 
+        // Vertical Character movement
+        if(vertical > 0 && IsGrounded())
+        {
+            rb2d.AddForce(new Vector2(0f, jump), ForceMode2D.Force);
+        }
     }
 
+    private bool IsGrounded()
+    {
+        RaycastHit2D raycastHit ;
+        float extraHeight = 0.3f;
+
+        raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);            
+        return raycastHit.collider != null;
+    }
 
 }
