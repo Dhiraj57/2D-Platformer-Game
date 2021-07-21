@@ -7,13 +7,26 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public float Speed;
+    public float jump;
 
-    public void Update()
+    private Rigidbody2D rb2d;
+    private BoxCollider2D boxCollider;
+
+    [SerializeField] private LayerMask platformLayerMask;
+
+    private void Awake()
+    {
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+    }
+
+    private void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Jump");
-
+       
         PlayerMovementAnimation(horizontal, vertical);
+        MoveCharacter(horizontal, vertical);
 
         // play crouch animation
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
@@ -41,7 +54,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
             // Setting value of 'jump' boolean
-            if (vertical > 0)
+            if (vertical > 0 )
             {
                 animator.SetBool("Jump", true);
             }
@@ -65,5 +78,15 @@ public class PlayerController : MonoBehaviour
 
         transform.localScale = scale;
     }
+
+    private void MoveCharacter(float horizontal, float vertical)
+    {
+        // Horizontal character movement
+        Vector3 position = transform.position;
+        position.x += horizontal * Speed * Time.deltaTime;
+        transform.position = position;
+
+    }
+
 
 }
