@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         MoveCharacter(horizontal, vertical);
 
         // play crouch animation
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
             if(animator != null)
             {
@@ -96,10 +96,10 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit ;
-        float extraHeight = 0.3f;
+        float extraHeight = 1f;
 
-        raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);            
-        return raycastHit.collider != null;
+        raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);
+        return true; //raycastHit.collider != null;
     }
 
 }
