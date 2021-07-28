@@ -72,7 +72,8 @@ public class PlayerController : MonoBehaviour
 
     public void KillPlayer()
     {
-        ReloadLevel();
+        animator.SetTrigger("Death");
+        Invoke("ReloadLevel", 2f);
     }
 
     private void ReloadLevel()
