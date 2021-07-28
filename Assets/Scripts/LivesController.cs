@@ -12,10 +12,13 @@ public class LivesController : MonoBehaviour
 
     public void LoseLife()
     {
-        LivesCount[--LivesRemaning].enabled = false;
-        if(LivesRemaning == 0)
+        if(LivesRemaning > 0)
         {
-            playerController.KillPlayer();
+            LivesCount[--LivesRemaning].enabled = false;
+            if (LivesRemaning == 0)
+            {
+                playerController.KillPlayer();
+            }
         }
-    }
+    }       
 }
