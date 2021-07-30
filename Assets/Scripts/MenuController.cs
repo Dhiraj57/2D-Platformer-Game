@@ -5,29 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public GameObject LevelUI;
+
     public void GameStart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelUI.SetActive(true);
     }
 
     public void Quit()
     {
         Application.Quit();
-    }
-
-    public void Info()
-    {
-        SceneManager.LoadScene("Info");
-    }
-
-    public void Credits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
-
-    public void Menu()
-    {
-        SceneManager.LoadScene("Start");
     }
 
     public void Restart()

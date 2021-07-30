@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 956731490}
   - component: {fileID: 956731489}
   - component: {fileID: 956731488}
+  - component: {fileID: 956731491}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -519,18 +520,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 956731489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1435934692}
-        m_MethodName: Menu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &956731489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +558,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956731486}
   m_CullTransparentMesh: 0
+--- !u!114 &956731491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956731486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcbc3d62be5cf14fb5d623bdd0da9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levelname: Start
 --- !u!1 &1000842711
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbdd52491c7d7645868d58635bc9e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelUI: {fileID: 0}
 --- !u!1 &1879919465
 GameObject:
   m_ObjectHideFlags: 0
