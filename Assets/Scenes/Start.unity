@@ -949,6 +949,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720319492}
   m_CullTransparentMesh: 0
+--- !u!1 &737089550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737089551}
+  - component: {fileID: 737089552}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737089551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737089550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 348.4609, y: 173.78448, z: -325.53186}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737089552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737089550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90895f65b3c5ab145b42ae16a25d43d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - Level_01
+  - Level_02
+  - Level_03
+  - Level_04
 --- !u!1 &1017428679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2275,6 @@ GameObject:
   - component: {fileID: 1638835556}
   - component: {fileID: 1638835555}
   - component: {fileID: 1638835554}
-  - component: {fileID: 1638835558}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -2312,7 +2359,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638835556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435934692}
+        m_MethodName: Credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1638835556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,19 +2408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638835552}
   m_CullTransparentMesh: 0
---- !u!114 &1638835558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638835552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bcbc3d62be5cf14fb5d623bdd0da9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Levelname: Credits
 --- !u!1 &1770035146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2421,6 @@ GameObject:
   - component: {fileID: 1770035150}
   - component: {fileID: 1770035149}
   - component: {fileID: 1770035148}
-  - component: {fileID: 1770035152}
   m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
@@ -2461,7 +2505,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770035150}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435934692}
+        m_MethodName: Info
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770035150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2499,19 +2554,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770035146}
   m_CullTransparentMesh: 0
---- !u!114 &1770035152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770035146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bcbc3d62be5cf14fb5d623bdd0da9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Levelname: Info
 --- !u!1 &1846762801
 GameObject:
   m_ObjectHideFlags: 0

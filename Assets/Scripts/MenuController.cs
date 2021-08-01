@@ -17,6 +17,21 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Start");
+    }
+    
+    public void Info()
+    {
+        SceneManager.LoadScene("Info");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
