@@ -7,11 +7,14 @@ public class PlayerDeathController : MonoBehaviour
 {
     public PlayerController controller;
 
+    public ParticleController playerDeath;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             SoundManager.Instance.Play(SoundManager.Sounds.PlayerDeath);
+            playerDeath.PlayEffect();
             controller.ReloadLevel();
         }
     }
