@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            lifeController.LoseLife();
+            lifeController.LoseLife();         
         }
     }
 

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpKey()
     {
+        SoundManager.Instance.Play(SoundManager.Sounds.Pickup);
         scoreController.IncreaseScore(10);
     }
 
@@ -74,12 +75,23 @@ public class PlayerController : MonoBehaviour
     public void KillPlayer()
     {
         animator.SetTrigger("Death");
+        SoundManager.Instance.Play(SoundManager.Sounds.PlayerDeath);
         Invoke("ReloadLevel", 2f);
     }
 
     public void ReloadLevel()
-    {
+    {   
         gameOver.SetActive(true);
+    }
+
+    public void MovementSound()
+    {
+        SoundManager.Instance.Play(SoundManager.Sounds.PlayerMove);
+    }
+
+    public void JumpSound()
+    {
+        SoundManager.Instance.Play(SoundManager.Sounds.Jump);
     }
 
 }

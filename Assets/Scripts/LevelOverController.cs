@@ -11,6 +11,7 @@ public class LevelOverController : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             LevelManager.Instance.MarkLevelComplete();
+            SoundManager.Instance.Play(SoundManager.Sounds.LevelWin);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

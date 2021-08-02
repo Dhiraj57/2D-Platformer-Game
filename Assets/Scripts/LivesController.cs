@@ -15,6 +15,7 @@ public class LivesController : MonoBehaviour
         if(LivesRemaning > 0)
         {
             LivesCount[--LivesRemaning].enabled = false;
+            SoundManager.Instance.Play(SoundManager.Sounds.EnemyCollision);
             if (LivesRemaning == 0)
             {
                 playerController.KillPlayer();

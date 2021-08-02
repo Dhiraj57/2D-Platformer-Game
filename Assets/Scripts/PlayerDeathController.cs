@@ -11,6 +11,7 @@ public class PlayerDeathController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SoundManager.Instance.Play(SoundManager.Sounds.PlayerDeath);
             controller.ReloadLevel();
         }
     }
