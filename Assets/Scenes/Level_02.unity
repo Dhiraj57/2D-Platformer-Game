@@ -8649,7 +8649,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -8696,8 +8696,9 @@ MonoBehaviour:
   animator: {fileID: 7657241566446517471}
   scoreController: {fileID: 1477815549}
   gameOver: {fileID: 777326450}
-  Speed: 10
-  jump: 50
+  Speed: 15
+  jump: 30
+  isDead: 0
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 256
